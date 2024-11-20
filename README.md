@@ -16,6 +16,10 @@ configs:
       path: latin-wiktextract-data.jsonl
     - split: AncientGreek
       path: ancient-greek-wiktextract-data.jsonl
+    - split: OldPersian
+      path: old-persian-wiktextract-data.jsonl
+    - split: Akkadian
+      path: akkadian-wiktextract-data.jsonl
     - split: GraphData
       path: word-definition-graph-data.jsonl
 tags:
@@ -41,10 +45,11 @@ Wiktionary Data on Hugging Face Datasets
 [wiktionary-data]() is a sub-data extraction of the [English Wiktionary](https://en.wiktionary.org) that currently
 supports the following languages:
 
-- German
-- Latin
-- Ancient Greek
-- [Old Persian](https://en.wikipedia.org/wiki/Old_Persian_cuneiform)
+- __Deutsch__ - German
+- __Latinum__ - Latin
+- __Ἑλληνική__ - Ancient Greek
+- __𐎠𐎼𐎹__ - [Old Persian](https://en.wikipedia.org/wiki/Old_Persian_cuneiform)
+- __𒀝𒅗𒁺𒌑(𒌝)__ - [Akkadian](https://en.wikipedia.org/wiki/Akkadian_language)
 
 [wiktionary-data]() was originally a sub-module of [wilhelm-graphdb](https://github.com/QubitPi/wilhelm-graphdb). While
 the dataset it's getting bigger, I noticed a wave of more exciting potentials this dataset can bring about that
@@ -64,6 +69,7 @@ The available splits are
 - `Latin`
 - `AncientGreek`
 - `OldPersian`
+- `Akkadian`
 
 In addition, a separate split for graph data is offered:
 
