@@ -34,25 +34,25 @@ jobs:
         with:
           access_token: ${{ github.token }}
 
-#  yaml-lint:
-#    name: YAML Style Check
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v3
-#      - uses: actionshub/yamllint@main
-#
-#  linkChecker:
-#    name: Link Check
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v3
-#      - name: Link Checker
-#        uses: lycheeverse/lychee-action@v1.9.0
-#        with:
-#          fail: true
+  yaml-lint:
+    name: YAML Style Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actionshub/yamllint@main
+
+  linkChecker:
+    name: Link Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v1.9.0
+        with:
+          fail: true
 
   sync-to-huggingface-space:
-    #needs: [yaml-lint, linkChecker]
+    needs: [yaml-lint, linkChecker]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

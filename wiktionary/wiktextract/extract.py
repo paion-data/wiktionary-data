@@ -20,13 +20,7 @@ def extract_data(wiktextract_data_path: str):
     """
     Extract data from raw-wiktextract-data.jsonl useful for wilhelmlang.com.
 
-    There will be 3 languages extracted, each of which in a dedicated .jsonl file:
-
-    1. German
-    2. Latin
-    3. Ancient Greek
-
-    Each line of the JSONL file has the following fields:
+    Data of each language is written in a dedicated .jsonl file. Each line of the JSONL file has the following fields:
 
     - term: the word of the language
     - pos: the Part of Speech of this word
