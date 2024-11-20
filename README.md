@@ -9,6 +9,7 @@ language:
   - ko
   - peo
   - akk
+  - sa
 configs:
   - config_name: Languages
     data_files:
@@ -24,22 +25,27 @@ configs:
       path: old-persian-wiktextract-data.jsonl
     - split: Akkadian
       path: akkadian-wiktextract-data.jsonl
+    - split: Sanskrit
+      path: sanskrit-wiktextract-data.jsonl
   - config_name: Graph
     data_files:
     - split: AllLanguage
       path: word-definition-graph-data.jsonl
 tags:
+  - Natural Language Processing
+  - NLP
   - Wiktionary
+  - Vocabulary
   - German
   - Latin
   - Ancient Greek
   - Korean
   - Old Persian
   - Akkadian
-  - Vocabulary
+  - Sanskrit
   - Knowledge Graph
 size_categories:
-  - 1M<n<10M
+  - 100M<n<1B
 ---
 
 Wiktionary Data on Hugging Face Datasets
@@ -61,6 +67,7 @@ supports the following languages:
 - __한국어__ - Korean
 - __𐎠𐎼𐎹__ - [Old Persian](https://en.wikipedia.org/wiki/Old_Persian_cuneiform)
 - __𒀝𒅗𒁺𒌑(𒌝)__ - [Akkadian](https://en.wikipedia.org/wiki/Akkadian_language)
+- __संस्कृतम्__ - Sanskrit, or Classical Sanskrit
 
 [wiktionary-data]() was originally a sub-module of [wilhelm-graphdb](https://github.com/QubitPi/wilhelm-graphdb). While
 the dataset it's getting bigger, I noticed a wave of more exciting potentials this dataset can bring about that
@@ -84,10 +91,22 @@ There are __two__ data subsets:
    - `Korean`
    - `OldPersian`
    - `Akkadian`
+   - `Sanskrit`
 
 2. __Graph__ subset that is useful for constructing knowledge graphs:
 
    - `AllLanguage`: all the languages in a giant graph
+
+   The _Graph_ data ontology is the following:
+
+   <div align="center">
+       <img src="ontology.png" size="50%" alt="Error loading ontology.png"/>
+   </div>
+
+> [!TIP]
+>
+> Two words are structurally similar if and only if the two shares the same\
+> [stem](https://en.wikipedia.org/wiki/Word_stem)
 
 Development
 -----------
