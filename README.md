@@ -24,6 +24,10 @@ configs:
       path: old-persian-wiktextract-data.jsonl
     - split: Akkadian
       path: akkadian-wiktextract-data.jsonl
+  - config_name: Graph
+    data_files:
+    - split: All
+      path: word-definition-graph-data.jsonl
 tags:
   - Wiktionary
   - German
@@ -33,6 +37,7 @@ tags:
   - Old Persian
   - Akkadian
   - Vocabulary
+  - Knowledge Graph
 size_categories:
   - 1M<n<10M
 ---
@@ -77,6 +82,12 @@ The available splits are
 - `Korean`
 - `OldPersian`
 - `Akkadian`
+
+In addition, a separate split for graph data is offered:
+
+- `GraphData`
+
+This split contains all the languages and puts everything in a giant graph
 
 Development
 -----------

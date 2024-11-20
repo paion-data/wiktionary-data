@@ -23,3 +23,4 @@ if __name__ == "__main__":
     args = vars(parser.parse_args())
 
     extract_data(args["input"])
+    extract_graph(args["input"])

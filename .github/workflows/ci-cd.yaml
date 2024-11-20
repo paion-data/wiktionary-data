@@ -79,8 +79,12 @@ jobs:
 
           git lfs install
           git lfs track "*-wiktextract-data.jsonl"
+          git lfs track "word-definition-graph-data.jsonl"
+
           git add *-wiktextract-data.jsonl
-          git commit -m "Extract raw-wiktextract-data.jsonl into per-language wiktextract-data.jsonl"
+          git add word-definition-graph-data.jsonl
+
+          git commit -m "Extract raw-wiktextract-data.jsonl into per-language wiktextract-data.jsonl and generate graph data"
           git push https://QubitPi:$HF_TOKEN@huggingface.co/datasets/QubitPi/wiktionary-data master:main -f
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
