@@ -4,9 +4,11 @@ pretty_name: English Wiktionary Data in JSONL
 language:
   - en
   - de
-  - grc
   - la
+  - grc
+  - ko
   - peo
+  - akk
 configs:
   - config_name: Languages
     data_files:
@@ -16,17 +18,20 @@ configs:
       path: latin-wiktextract-data.jsonl
     - split: AncientGreek
       path: ancient-greek-wiktextract-data.jsonl
+    - split: Korean
+      path: korean-wiktextract-data.jsonl
     - split: OldPersian
       path: old-persian-wiktextract-data.jsonl
     - split: Akkadian
       path: akkadian-wiktextract-data.jsonl
-    - split: GraphData
-      path: word-definition-graph-data.jsonl
 tags:
   - Wiktionary
   - German
-  - Ancient Greek
   - Latin
+  - Ancient Greek
+  - Korean
+  - Old Persian
+  - Akkadian
   - Vocabulary
 size_categories:
   - 1M<n<10M
@@ -48,6 +53,7 @@ supports the following languages:
 - __Deutsch__ - German
 - __Latinum__ - Latin
 - __Ἑλληνική__ - Ancient Greek
+- __한국어__ - Korean
 - __𐎠𐎼𐎹__ - [Old Persian](https://en.wikipedia.org/wiki/Old_Persian_cuneiform)
 - __𒀝𒅗𒁺𒌑(𒌝)__ - [Akkadian](https://en.wikipedia.org/wiki/Akkadian_language)
 
@@ -68,14 +74,9 @@ The available splits are
 - `German`
 - `Latin`
 - `AncientGreek`
+- `Korean`
 - `OldPersian`
 - `Akkadian`
-
-In addition, a separate split for graph data is offered:
-
-- `GraphData`
-
-This split contains all the languages and puts everything in a giant graph
 
 Development
 -----------
@@ -99,7 +100,7 @@ The use and distribution terms for [wiktionary-data]() are covered by the [Apach
 [GitHub workflow status badge]: https://img.shields.io/github/actions/workflow/status/QubitPi/wiktionary-data/ci-cd.yaml?branch=master&style=for-the-badge&logo=github&logoColor=white&label=CI/CD
 [GitHub workflow status URL]: https://github.com/QubitPi/wiktionary-data/actions/workflows/ci-cd.yaml
 
-[Hugging Face dataset badge]: https://img.shields.io/badge/Hugging%20Face%20Dataset-wiktionary--data-FFD21E?style=for-the-badge&logo=huggingface&logoColor=white
+[Hugging Face dataset badge]: https://img.shields.io/badge/Hugging%20Face%20Dataset-wiktionary--data-FF9D00?style=for-the-badge&logo=huggingface&logoColor=white&labelColor=6B7280
 [Hugging Face dataset URL]: https://huggingface.co/datasets/QubitPi/wiktionary-data
 
 [Hugging Face sync status badge]: https://img.shields.io/github/actions/workflow/status/QubitPi/wiktionary-data/ci-cd.yaml?branch=master&style=for-the-badge&logo=github&logoColor=white&label=Hugging%20Face%20Sync%20Up

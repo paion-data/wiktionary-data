@@ -42,6 +42,7 @@ def extract_data(wiktextract_data_path: str):
           open("german-wiktextract-data.jsonl", "w") as german,
           open("latin-wiktextract-data.jsonl", "w") as latin,
           open("ancient-greek-wiktextract-data.jsonl", "w") as ancient_greek,
+          open("korean-wiktextract-data.jsonl", "w") as korean,
           open("old-persian-wiktextract-data.jsonl", "w") as old_persian,
           open("akkadian-wiktextract-data.jsonl", "w") as akkadian
     ):
@@ -71,6 +72,9 @@ def extract_data(wiktextract_data_path: str):
                 if vocabulary["lang"] == "Ancient Greek":
                     ancient_greek.write(json.dumps({"term": term, "part of speech": pos, "definitions": definitions, "audios": audios}))
                     ancient_greek.write("\n")
+                if vocabulary["lang"] == "korean":
+                    korean.write(json.dumps({"term": term, "part of speech": pos, "definitions": definitions, "audios": audios}))
+                    korean.write("\n")
                 if vocabulary["lang"] == "Old Persian":
                     old_persian.write(json.dumps({"term": term, "part of speech": pos, "definitions": definitions, "audios": audios}))
                     old_persian.write("\n")
