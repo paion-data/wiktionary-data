@@ -6,6 +6,7 @@ language:
   - de
   - grc
   - la
+  - peo
 configs:
   - config_name: Languages
     data_files:
@@ -30,10 +31,11 @@ size_categories:
 Wiktionary Data on Hugging Face Datasets
 ========================================
 
+[![Hugging Face dataset badge]][Hugging Face dataset URL]
+
 ![Python Version Badge]
 [![GitHub workflow status badge][GitHub workflow status badge]][GitHub workflow status URL]
 [![Hugging Face sync status badge]][Hugging Face sync status URL]
-[![Hugging Face dataset badge]][Hugging Face dataset URL]
 [![Apache License Badge]][Apache License, Version 2.0]
 
 [wiktionary-data]() is a sub-data extraction of the [English Wiktionary](https://en.wiktionary.org) that currently
@@ -42,7 +44,7 @@ supports the following languages:
 - German
 - Latin
 - Ancient Greek
-- Old Persian
+- [Old Persian](https://en.wikipedia.org/wiki/Old_Persian_cuneiform)
 
 [wiktionary-data]() was originally a sub-module of [wilhelm-graphdb](https://github.com/QubitPi/wilhelm-graphdb). While
 the dataset it's getting bigger, I noticed a wave of more exciting potentials this dataset can bring about that
@@ -91,7 +93,7 @@ The use and distribution terms for [wiktionary-data]() are covered by the [Apach
 [GitHub workflow status badge]: https://img.shields.io/github/actions/workflow/status/QubitPi/wiktionary-data/ci-cd.yaml?branch=master&style=for-the-badge&logo=github&logoColor=white&label=CI/CD
 [GitHub workflow status URL]: https://github.com/QubitPi/wiktionary-data/actions/workflows/ci-cd.yaml
 
-[Hugging Face dataset badge]: https://img.shields.io/badge/Hugging%20Face%20Dataset-wilhelm--graphdb-FFD21E?style=for-the-badge&logo=huggingface&logoColor=white
+[Hugging Face dataset badge]: https://img.shields.io/badge/Hugging%20Face%20Dataset-wiktionary--data-FFD21E?style=for-the-badge&logo=huggingface&logoColor=white
 [Hugging Face dataset URL]: https://huggingface.co/datasets/QubitPi/wiktionary-data
 
 [Hugging Face sync status badge]: https://img.shields.io/github/actions/workflow/status/QubitPi/wiktionary-data/ci-cd.yaml?branch=master&style=for-the-badge&logo=github&logoColor=white&label=Hugging%20Face%20Sync%20Up

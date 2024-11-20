@@ -41,7 +41,8 @@ def extract_data(wiktextract_data_path: str):
     with (open(wiktextract_data_path) as data,
           open("german-wiktextract-data.jsonl", "w") as german,
           open("latin-wiktextract-data.jsonl", "w") as latin,
-          open("ancient-greek-wiktextract-data.jsonl", "w") as ancient_greek
+          open("ancient-greek-wiktextract-data.jsonl", "w") as ancient_greek,
+          open("old-persian-wiktextract-data.jsonl", "w") as old_persian
     ):
         for line in data:
             vocabulary = json.loads(line)
@@ -68,6 +69,9 @@ def extract_data(wiktextract_data_path: str):
                     latin.write("\n")
                 if vocabulary["lang"] == "Ancient Greek":
                     ancient_greek.write(json.dumps({"term": term, "part of speech": pos, "definitions": definitions, "audios": audios}))
+                    ancient_greek.write("\n")
+                if vocabulary["lang"] == "Old Persian":
+                    old_persian.write(json.dumps({"term": term, "part of speech": pos, "definitions": definitions, "audios": audios}))
                     ancient_greek.write("\n")
 
 def extract_graph(wiktextract_data_path: str):
