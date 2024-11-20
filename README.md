@@ -11,7 +11,7 @@ language:
   - akk
   - sa
 configs:
-  - config_name: Languages
+  - config_name: Wiktionary
     data_files:
     - split: German
       path: german-wiktextract-data.jsonl
@@ -27,7 +27,7 @@ configs:
       path: akkadian-wiktextract-data.jsonl
     - split: Sanskrit
       path: sanskrit-wiktextract-data.jsonl
-  - config_name: Graph
+  - config_name: Knowledge Graph
     data_files:
     - split: AllLanguage
       path: word-definition-graph-data.jsonl
@@ -105,17 +105,64 @@ There are __two__ data subsets:
 
 > [!TIP]
 >
-> Two words are structurally similar if and only if the two shares the same\
+> Two words are structurally similar if and only if the two shares the same
 > [stem](https://en.wikipedia.org/wiki/Word_stem)
 
 Development
 -----------
 
+### Data Source
+
 Although [the original Wiktionary dump](https://dumps.wikimedia.org/) is available, parsing it from scratch involves
-rather complicated process. We would probably do it in the future. At present, however, we would simply take the awesome
-works by [tatuylonen](https://github.com/tatuylonen/wiktextract) which has already processed it and presented it in
-[in JSON format](https://kaikki.org/dictionary/rawdata.html). wiktionary-data takes the
-__raw Wiktextract data (JSONL, one object per line)__ option.
+rather complicated process. For example,
+[acquiring the inflection data of most Indo-European languages on Wiktionary has already triggered some research-level efforts](https://stackoverflow.com/a/62977327).
+We would probably do it in the future. At present, however, we would simply take the awesome works by
+[tatuylonen](https://github.com/tatuylonen/wiktextract) which has already processed it and presented it in
+[in JSONL format](https://kaikki.org/dictionary/rawdata.html). __wiktionary-data sources the data from
+__raw Wiktextract data (JSONL, one object per line)__ option there.
+
+### Environment Setup
+
+Get the source code:
+
+```console
+git@github.com:QubitPi/wiktionary-data.git
+cd wiktionary-data
+```
+
+It is strongly recommended to work in an isolated environment. Install virtualenv and create an isolated Python
+environment by
+
+```console
+python3 -m pip install --user -U virtualenv
+python3 -m virtualenv .venv
+```
+
+To activate this environment:
+
+```console
+source .venv/bin/activate
+```
+
+or, on Windows
+
+```console
+./venv\Scripts\activate
+```
+
+> [!TIP]
+> 
+> To deactivate this environment, use
+> 
+> ```console
+> deactivate
+> ```
+
+### Installing Dependencies
+
+```console
+pip3 install -r requirements.txt
+```
 
 License
 -------
