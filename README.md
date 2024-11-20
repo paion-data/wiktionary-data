@@ -26,7 +26,7 @@ configs:
       path: akkadian-wiktextract-data.jsonl
   - config_name: Graph
     data_files:
-    - split: All
+    - split: AllLanguage
       path: word-definition-graph-data.jsonl
 tags:
   - Wiktionary
@@ -74,20 +74,20 @@ from datasets import load_dataset
 dataset = load_dataset("QubitPi/wiktionary-data", split="German")
 ```
 
-The available splits are
+There are __two__ data subsets:
 
-- `German`
-- `Latin`
-- `AncientGreek`
-- `Korean`
-- `OldPersian`
-- `Akkadian`
+1. __Languages__ subset that contains the sub-data extraction of the following splits:
 
-In addition, a separate split for graph data is offered:
+   - `German`
+   - `Latin`
+   - `AncientGreek`
+   - `Korean`
+   - `OldPersian`
+   - `Akkadian`
 
-- `GraphData`
+2. __Graph__ subset that is useful for constructing knowledge graphs:
 
-This split contains all the languages and puts everything in a giant graph
+   - `AllLanguage`: all the languages in a giant graph
 
 Development
 -----------

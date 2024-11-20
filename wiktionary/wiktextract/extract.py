@@ -72,7 +72,7 @@ def extract_data(wiktextract_data_path: str):
                 if vocabulary["lang"] == "Ancient Greek":
                     ancient_greek.write(json.dumps({"term": term, "part of speech": pos, "definitions": definitions, "audios": audios}))
                     ancient_greek.write("\n")
-                if vocabulary["lang"] == "korean":
+                if vocabulary["lang"] == "Korean":
                     korean.write(json.dumps({"term": term, "part of speech": pos, "definitions": definitions, "audios": audios}))
                     korean.write("\n")
                 if vocabulary["lang"] == "Old Persian":
