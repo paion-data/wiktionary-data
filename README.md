@@ -9,6 +9,7 @@ language:
   - ko
   - peo
   - akk
+  - elx
   - sa
 configs:
   - config_name: Wiktionary
@@ -25,6 +26,8 @@ configs:
       path: old-persian-wiktextract-data.jsonl
     - split: Akkadian
       path: akkadian-wiktextract-data.jsonl
+    - split: Elamite
+      path: elamite-wiktextract-data.jsonl
     - split: Sanskrit
       path: sanskrit-wiktextract-data.jsonl
   - config_name: Knowledge Graph
@@ -42,6 +45,7 @@ tags:
   - Korean
   - Old Persian
   - Akkadian
+  - Elamite
   - Sanskrit
   - Knowledge Graph
 size_categories:
@@ -67,6 +71,7 @@ supports the following languages:
 - __한국어__ - Korean
 - __𐎠𐎼𐎹__ - [Old Persian](https://en.wikipedia.org/wiki/Old_Persian_cuneiform)
 - __𒀝𒅗𒁺𒌑(𒌝)__ - [Akkadian](https://en.wikipedia.org/wiki/Akkadian_language)
+- [Elamite](https://en.wikipedia.org/wiki/Elamite_language)
 - __संस्कृतम्__ - Sanskrit, or Classical Sanskrit
 
 [wiktionary-data]() was originally a sub-module of [wilhelm-graphdb](https://github.com/QubitPi/wilhelm-graphdb). While
@@ -91,6 +96,7 @@ There are __two__ data subsets:
    - `Korean`
    - `OldPersian`
    - `Akkadian`
+   - `Elamite`
    - `Sanskrit`
 
 2. __Graph__ subset that is useful for constructing knowledge graphs:

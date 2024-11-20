@@ -45,6 +45,7 @@ def extract_data(wiktextract_data_path: str):
           open("korean-wiktextract-data.jsonl", "w") as korean,
           open("old-persian-wiktextract-data.jsonl", "w") as old_persian,
           open("akkadian-wiktextract-data.jsonl", "w") as akkadian,
+          open("elamite-wiktextract-data.jsonl", "w") as elamite,
           open("sanskrit-wiktextract-data.jsonl", "w") as sanskrit
     ):
         for line in data:
@@ -82,6 +83,9 @@ def extract_data(wiktextract_data_path: str):
                 if vocabulary["lang"] == "Akkadian":
                     akkadian.write(json.dumps({"term": term, "part of speech": pos, "definitions": definitions, "audios": audios}))
                     akkadian.write("\n")
+                if vocabulary["lang"] == "Elamite":
+                    elamite.write(json.dumps({"term": term, "part of speech": pos, "definitions": definitions, "audios": audios}))
+                    elamite.write("\n")
                 if vocabulary["lang"] == "Sanskrit":
                     sanskrit.write(json.dumps({"term": term, "part of speech": pos, "definitions": definitions, "audios": audios}))
                     sanskrit.write("\n")
