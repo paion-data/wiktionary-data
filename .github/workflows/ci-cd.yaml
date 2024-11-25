@@ -1,4 +1,4 @@
-# Copyright Jiaqi Liu
+# Copyright Paion Data
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -101,6 +101,6 @@ jobs:
           git add word-definition-graph-data.jsonl
 
           git commit -m "Extract raw-wiktextract-data.jsonl into per-language wiktextract-data.jsonl and generate graph data"
-          git push https://QubitPi:$HF_TOKEN@huggingface.co/datasets/QubitPi/wiktionary-data master:main -f
+          git push https://paion-data:$HF_TOKEN@huggingface.co/datasets/paion-data/wiktionary-data master:main -f
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
