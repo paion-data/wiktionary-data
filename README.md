@@ -83,7 +83,7 @@ The Wiktionary language data is available on 🤗 [Hugging Face Datasets][Huggin
 
 ```python
 from datasets import load_dataset
-dataset = load_dataset("QubitPi/wiktionary-data", split="German")
+dataset = load_dataset("paion-data/wiktionary-data", split="German")
 ```
 
 There are __two__ data subsets:
@@ -132,7 +132,7 @@ __raw Wiktextract data (JSONL, one object per line)__ option there.
 Get the source code:
 
 ```console
-git@github.com:QubitPi/wiktionary-data.git
+git@github.com:paion-data/wiktionary-data.git
 cd wiktionary-data
 ```
 
@@ -178,13 +178,13 @@ The use and distribution terms for [wiktionary-data]() are covered by the [Apach
 [Apache License Badge]: https://img.shields.io/badge/Apache%202.0-F25910.svg?style=for-the-badge&logo=Apache&logoColor=white
 [Apache License, Version 2.0]: https://www.apache.org/licenses/LICENSE-2.0
 
-[GitHub workflow status badge]: https://img.shields.io/github/actions/workflow/status/QubitPi/wiktionary-data/ci-cd.yaml?branch=master&style=for-the-badge&logo=github&logoColor=white&label=CI/CD
-[GitHub workflow status URL]: https://github.com/QubitPi/wiktionary-data/actions/workflows/ci-cd.yaml
+[GitHub workflow status badge]: https://img.shields.io/github/actions/workflow/status/paion-data/wiktionary-data/ci-cd.yaml?branch=master&style=for-the-badge&logo=github&logoColor=white&label=CI/CD
+[GitHub workflow status URL]: https://github.com/paion-data/wiktionary-data/actions/workflows/ci-cd.yaml
 
 [Hugging Face dataset badge]: https://img.shields.io/badge/Hugging%20Face%20Dataset-wiktionary--data-FF9D00?style=for-the-badge&logo=huggingface&logoColor=white&labelColor=6B7280
-[Hugging Face dataset URL]: https://huggingface.co/datasets/QubitPi/wiktionary-data
+[Hugging Face dataset URL]: https://huggingface.co/datasets/paion-data/wiktionary-data
 
-[Hugging Face sync status badge]: https://img.shields.io/github/actions/workflow/status/QubitPi/wiktionary-data/ci-cd.yaml?branch=master&style=for-the-badge&logo=github&logoColor=white&label=Hugging%20Face%20Sync%20Up
-[Hugging Face sync status URL]: https://github.com/QubitPi/wiktionary-data/actions/workflows/ci-cd.yaml
+[Hugging Face sync status badge]: https://img.shields.io/github/actions/workflow/status/paion-data/wiktionary-data/ci-cd.yaml?branch=master&style=for-the-badge&logo=github&logoColor=white&label=Hugging%20Face%20Sync%20Up
+[Hugging Face sync status URL]: https://github.com/paion-data/wiktionary-data/actions/workflows/ci-cd.yaml
 
 [Python Version Badge]: https://img.shields.io/badge/Python-3.10-FFD845?labelColor=498ABC&style=for-the-badge&logo=python&logoColor=white
