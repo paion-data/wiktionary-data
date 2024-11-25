@@ -124,7 +124,7 @@ rather complicated process. For example,
 [acquiring the inflection data of most Indo-European languages on Wiktionary has already triggered some research-level efforts](https://stackoverflow.com/a/62977327).
 We would probably do it in the future. At present, however, we would simply take the awesome works by
 [tatuylonen](https://github.com/tatuylonen/wiktextract) which has already processed it and presented it in
-[in JSONL format](https://kaikki.org/dictionary/rawdata.html). __wiktionary-data sources the data from
+[in JSONL format](https://kaikki.org/dictionary/rawdata.html). wiktionary-data sources the data from
 __raw Wiktextract data (JSONL, one object per line)__ option there.
 
 ### Environment Setup
@@ -177,8 +177,6 @@ The use and distribution terms for [wiktionary-data]() are covered by the [Apach
 
 [Apache License Badge]: https://img.shields.io/badge/Apache%202.0-F25910.svg?style=for-the-badge&logo=Apache&logoColor=white
 [Apache License, Version 2.0]: https://www.apache.org/licenses/LICENSE-2.0
-
-[Docker login command]: https://docker.qubitpi.org//reference/cli/docker/login/#options
 
 [GitHub workflow status badge]: https://img.shields.io/github/actions/workflow/status/QubitPi/wiktionary-data/ci-cd.yaml?branch=master&style=for-the-badge&logo=github&logoColor=white&label=CI/CD
 [GitHub workflow status URL]: https://github.com/QubitPi/wiktionary-data/actions/workflows/ci-cd.yaml
